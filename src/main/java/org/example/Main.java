@@ -3,19 +3,21 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Laser laser = new Laser();
-        StrongRight strongRight = new StrongRight();
-        RayGun rayGun = new RayGun();
+        Weapon laser = new Laser();
+        Weapon strongRight = new StrongRight();
+        Weapon rayGun = new RayGun();
 
-        Robot robot_one = new Robot("Gir", laser);
-        Robot robot_two = new Robot("Franky", strongRight);
-        Robot robot_three = new Robot("ED-E", rayGun);
+        Attacker robot_one = new Robot("Gir", laser);
+        Attacker robot_two = new Robot("Franky", strongRight);
+        Attacker robot_three = new Robot("ED-E", rayGun);
+
+        Attacker dino_one = new Dinosaur("Gawr", 80);
 
 
         robot_one.Attack();
         robot_two.Attack();
         robot_three.Attack();
-
+        dino_one.Attack();
     }
 
 }
