@@ -9,8 +9,8 @@ public class Robot {
 
 
     //Constructor
-    public Robot(Weapon weapon) {
-        this.name = "Gir";
+    public Robot(String name, Weapon weapon) {
+        this.name = name;
         this.weapon = weapon;
     }
 

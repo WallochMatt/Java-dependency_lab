@@ -2,15 +2,20 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
 
-        Weapon club = new Weapon("Club", 25);
+        Laser laser = new Laser();
+        StrongRight strongRight = new StrongRight();
+        RayGun rayGun = new RayGun();
 
-        Robot robot_one = new Robot(new Weapon("Self Destruct", 50));
-        Robot robot_two = new Robot(club);
+        Robot robot_one = new Robot("Gir", laser);
+        Robot robot_two = new Robot("Franky", strongRight);
+        Robot robot_three = new Robot("ED-E", rayGun);
 
-        System.out.println(robot_one.name);
+
         robot_one.Attack();
         robot_two.Attack();
+        robot_three.Attack();
+
     }
+
 }
